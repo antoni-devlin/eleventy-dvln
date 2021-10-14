@@ -1,0 +1,19 @@
+{
+  "items": [
+    {
+      "text": "Twitter",
+      "url": "https://twitter.com/devils_inn",
+      "imagePath": "/images/icons/github.png"
+    },
+    {
+      "text": "Github",
+      "url": "https://www.github.com/antoni-devlin",
+      "imagePath": "/images/icons/github.png"
+    },
+    {
+      "text": "Email",
+      "url": "mailto:antoni.devlin@gmail.com",
+      "imagePath": "/images/icons/github.png"
+    }
+  ]
+}

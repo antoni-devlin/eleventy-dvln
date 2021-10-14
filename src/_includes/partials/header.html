@@ -1,0 +1,9 @@
+<header>
+<nav class="main-menu">
+  <ul>
+    {% for item in navigation.items %}
+    <li><a href="{{item.url}}">{{item.text}}</a></li>
+    {% endfor %}
+  </ul>
+</nav>
+</header>

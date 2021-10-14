@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>DVLN – {{title}}</title>
+    <link rel="stylesheet" href="/styles/main.css">
+  </head>
+  <body>
+    {% include "partials/header.html" %}
+    <main tabindex="0">
+      {% block content%}
+      {% endblock %}
+    </main>
+    <footer>
+    </footer>
+  </body>
+</html>
