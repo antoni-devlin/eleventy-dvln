@@ -1,12 +1,37 @@
+---
+pagination:
+  data: collections.blogPosts
+  size: 3
+  alias: blogPosts
+
+
+---
+
 {% extends "layouts/base.html" %}
 {% block content %}
-{% for post in collections.blogPosts | reverse %}
+
+{% for post in blogPosts | reverse %}
 <section class="post-teaser">
   <img src="{{ post.data.hero.url }}" alt="{{ post.data.hero.alt }}">
-  <a href="{{post.data.permalink}}"><h1>{{post.data.title}}</h1></a>
-  {# TODO: Dynamic excerpt #}
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.</p>
+  <a href="{{post.url}}">
+    <h1>{{post.data.title}}</h1>
+  </a>
   <p class="date">{{post.date|dateFilter}}</p>
 </section>
 {% endfor %}
+
+<section class="post-teaser">
+<nav class="pagination-menu">
+  <ul>
+    {# <a href="{{ pagination.href.last }}">First</a> #}
+    {% if pagination.href.previous %}<a href="{{pagination.href.previous}}">←</a>{% endif %}
+    {% for pageEntry in pagination.pages %}
+    <a href="{{ pagination.hrefs[ loop.index0 ] }}" {% if page.url==pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %}>{{loop.index}}<li class="page-button"></li></a>
+    {% endfor %}
+    {# <a href="{{ pagination.href.last }}">Last</a> #}
+    {% if pagination.href.next %}<a href="{{pagination.href.next}}">→</a>{% endif %}
+  </ul>
+</nav>
+<section class="post-teaser">
+
 {% endblock %}

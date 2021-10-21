@@ -10,7 +10,6 @@ Thumbs.db
 .cache
 
 # Node modules and output
-node_modules
-dist
-src/_includes/css
+node_modules/
 raw-templates/
+dist

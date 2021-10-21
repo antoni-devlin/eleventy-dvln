@@ -1,5 +1,5 @@
 ---
-title: 'Post heading'
+title: 'Another post heading'
 tags: ['tag1', 'tag2', 'test']
 hero:
   url: '/images/first-post-hero.jpg'

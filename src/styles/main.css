@@ -18,7 +18,7 @@ h1 {
   font-family: serif;
 }
 
-/* Navbar styles */
+/* Navigation styles */
 nav.main-menu {
   padding-bottom: 80px;
 }
@@ -45,6 +45,27 @@ nav.main-menu li a {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+}
+
+nav.pagination-menu ul {
+  list-style-type: none;
+}
+
+nav.pagination-menu a {
+  float: left;
+  padding: 10px 15px;
+  margin: 10px;
+  border: 1px solid;
+  border-radius:5px;
+  text-decoration: none
+}
+
+nav.pagination-menu a:visited {
+  color: black;
+}
+
+nav.pagination-menu a:hover {
+  color: red;
 }
 
 /* Homepage - Post teaser styles */
