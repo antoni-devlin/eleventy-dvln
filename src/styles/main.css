@@ -239,3 +239,8 @@ footer {
   height: 80px;
   margin: 80px 0 0 0;
 }
+
+.build-date {
+  font-size: 95%;
+  padding: 20px 0 0 50px;
+}
