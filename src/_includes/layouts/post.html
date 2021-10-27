@@ -8,7 +8,7 @@
         {% endif  %}
         {% endif %}
         <h1>{{title}}</h1>
-        <p class="date">{{ page.date | dateFilter }}</p>
+        <p class="date">{% icon "calendar" %}  {{ page.date | dateFilter }}</p>
 
           {{ content | safe }}
 {% if tags %}
