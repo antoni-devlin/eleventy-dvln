@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "feather-icons": "^4.28.0",
     "moment": "^2.29.1"
   },
   "devDependencies": {

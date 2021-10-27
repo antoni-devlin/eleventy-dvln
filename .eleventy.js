@@ -32,6 +32,14 @@ Your browser does not support the video tag.
 `;
   });
 
+  // Feathericons shortcode
+  const feather = require('feather-icons');
+
+  // You'll need to pass more arguments, but this is the general idea
+  const iconShortcode = (icon) => feather.icons[icon].toSvg();
+  config.addShortcode('icon', iconShortcode);
+
+
   // Set directories to pass through to the dist folder
   config.addPassthroughCopy('./src/images/');
   config.addPassthroughCopy('./src/styles/');
