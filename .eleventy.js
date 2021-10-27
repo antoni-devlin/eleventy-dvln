@@ -43,6 +43,7 @@ Your browser does not support the video tag.
   // Set directories to pass through to the dist folder
   config.addPassthroughCopy('./src/images/');
   config.addPassthroughCopy('./src/styles/');
+  config.addPassthroughCopy('./src/scripts/');
 
   // Returns work items, sorted by display order
   config.addCollection('blogPosts', collection => {
