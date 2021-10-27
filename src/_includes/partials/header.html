@@ -1,9 +1,15 @@
 <header>
-<nav class="main-menu">
-  <ul>
-    {% for item in navigation.items %}
-    <li><a href="{{item.url}}">{{item.text}}</a></li>
-    {% endfor %}
-  </ul>
-</nav>
+  <nav class="main-menu">
+    <ul>
+      {% for item in navigation.items %}
+      <li><a href="{{item.url}}">{{item.text}}</a></li>
+      {% endfor %}
+    </ul>
+    {% if '/blog/' in page.url %}
+    <script src="/scripts/scrollbar.js"></script>
+    <div class="progress-container">
+      <div class="progress-bar" id="prog-bar"></div>
+    </div>
+    {% endif %}
+  </nav>
 </header>

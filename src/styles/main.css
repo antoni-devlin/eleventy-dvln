@@ -1,5 +1,9 @@
 /* Slight reset */
 
+main {
+  padding-top:4vh;
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -19,8 +23,26 @@ h1 {
 }
 
 /* Navigation styles */
+/* header {
+  position: fixed;
+  width: 100%;
+} */
+
+.progress-container {
+  width: 100%;
+  height: 8px;
+}
+
+.progress-bar {
+  height: 15px;
+  background: red;
+  width: 0%;
+}
+
 nav.main-menu {
-  padding-bottom: 80px;
+  position: fixed;
+  width: 100%;
+  background: white;
 }
 
 nav.main-menu ul{
@@ -29,10 +51,8 @@ nav.main-menu ul{
   width: 100%;
   /* height: 50px; */
   list-style-type: none;
-  margin: 0 auto;
-  padding: 0;
+  margin: 0 auto;;
   /* overflow: hidden; */
-  position: fixed;
 }
 
 nav.main-menu li {
