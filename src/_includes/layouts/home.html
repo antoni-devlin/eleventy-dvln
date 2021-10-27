@@ -17,6 +17,7 @@ pagination:
     <h1>{{post.data.title}}</h1>
   </a>
   <p class="date">{{post.date|dateFilter}}</p>
+  <p>{{post.data.content|safe|truncate(450)}}</p>
 </section>
 {% endfor %}
 
