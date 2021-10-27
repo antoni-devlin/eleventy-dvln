@@ -6,14 +6,4 @@
         {% endif %}
         <h1>{{title}}</h1>
           {{ content | safe }}
-      {% if permalink == '/about/index.html' %}
-      <h1>Get in touch</h1>
-        <ul class="social-icons">
-          {% for item in socialicons.items %}
-            <li><a href="{{item.url}}">{{item.text}}</a><img src="{{item.imagePath}}"></img></li>
-          {% endfor %}
-        </ul>
-        </ul>
-      {% endif %}
-      </section>
 {% endblock %}
