@@ -48,12 +48,12 @@ Your browser does not support the video tag.
   // Returns work items, sorted by display order
   config.addCollection('blogPosts', collection => {
     return collection
-      .getFilteredByGlob('./src/posts/*.md')
+      .getFilteredByGlob('./src/posts/*.md').reverse()
   });
 
   config.addCollection('workPosts', collection => {
     return collection
-      .getFilteredByGlob('./src/work/*.md')
+      .getFilteredByGlob('./src/work/*.md').reverse()
   });
 
   return {
