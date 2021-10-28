@@ -42,7 +42,8 @@ h1 {
 nav.main-menu {
   position: fixed;
   width: 100%;
-  background: white;
+  background-color:rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(20px);
 }
 
 nav.main-menu ul{
