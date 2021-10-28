@@ -128,7 +128,7 @@ section.post-teaser p:first-of-type {
 }
 
 section .date {
-  color: grey;
+  color:rgba(1,1,1,0.6);
   margin: 5px 0 0 0;
 }
 
@@ -243,4 +243,9 @@ footer {
 .build-date {
   font-size: 95%;
   padding: 20px 0 0 50px;
+}
+
+.yt-shortcode {
+  width: 100%;
+  min-height: 540px;
 }
