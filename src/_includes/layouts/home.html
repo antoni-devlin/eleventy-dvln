@@ -1,16 +1,14 @@
 ---
 pagination:
   data: collections.blogPosts
-  size: 3
+  size: 5
   alias: blogPosts
-
-
 ---
 
 {% extends "layouts/base.html" %}
 {% block content %}
 
-{% for post in blogPosts | reverse %}
+{% for post in blogPosts %}
 <section class="post-teaser">
   <img src="{{ post.data.hero.url }}" alt="{{ post.data.hero.alt }}">
   <a href="{{post.url}}">

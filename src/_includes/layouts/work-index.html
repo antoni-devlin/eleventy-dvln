@@ -5,7 +5,7 @@ eleventyExcludeFromCollections: true
 {% block content %}
       <div class="work-grid-container">
         <h1 class="page-heading">Work</h1>
-        {% for post in collections.workPosts | reverse %}
+        {% for post in collections.workPosts %}
       <section class="work-teaser">
         <img src="{{post.data.hero.url}}" alt="">
         <a href="{{post.data.permalink}}"><h1>{{post.data.title}}</h1></a>
