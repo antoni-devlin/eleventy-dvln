@@ -15,7 +15,7 @@
 <span class="tags">
   <ul>
     {% for tag in tags %}
-    <li><a href="/tag/{{ tag | slug }}/">#{{ tag | title | replace(' ', '')}}</a></li>
+    <li><a href="/tags/{{ tag | slug }}/">#{{ tag | title | replace(' ', '')}}</a></li>
     {% endfor %}
   </ul>
 </span>
