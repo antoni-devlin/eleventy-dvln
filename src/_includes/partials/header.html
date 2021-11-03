@@ -4,6 +4,9 @@
       {% for item in navigation.items %}
       <li><a href="{{item.url}}">{{item.text}}</a></li>
       {% endfor %}
+      {% if config.isLive == true  %}
+      <li><a href="http://youtube.com/channel/UCRMiolxOG29u8G8Nzv1J22A/live">Live</a></li>
+      {% endif  %}
     </ul>
     {% if '/blog/' in page.url %}
     <script src="/scripts/scrollbar.js"></script>
