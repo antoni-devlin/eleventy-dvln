@@ -4,9 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npx eleventy --serve",
-    "dev-build": "rm -rf dist/ && npx eleventy build",
-    "prod-build": "npx eleventy build"
+    "watch:sass": "sass --watch ./src/styles:dist/styles",
+    "build:sass": "sass ./src/styles:dist/styles",
+    "watch:eleventy": "npx eleventy --serve",
+    "build:eleventy-prod": "npx eleventy build",
+    "build:eleventy-dev": "rm -rf dist/ && npx eleventy build",
+    "start": "npm-run-all build:sass --parallel watch:*",
+    "build-prod": "npm-run-all build:eleventy-prod",
+    "build-dev": "npm-run-all build:eleventy-dev"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +22,8 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.43.4",
     "slugify": "^1.6.1"
   }
 }
