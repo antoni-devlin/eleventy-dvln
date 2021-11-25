@@ -32,6 +32,22 @@ Your browser does not support the video tag.
 `;
   });
 
+  config.addShortcode('readingTime', function (text) {
+    // Get entire post element
+    let wordCount = `${text}`.match(/\b[-?(\w+)?]+\b/gi).length;
+    // calculate time in minutes based on average reading time
+    let timeInMinutes = (wordCount / 225)
+    // Validation as we don't want to show 0 if time is under 30s
+    let output;
+    if (timeInMinutes <= 0.5) {
+      output = 1;
+    } else {
+      // round to nearest minute
+      output = Math.round(timeInMinutes);
+    }
+    return `${output}`
+  });
+
   // Feathericons shortcode
   const feather = require('feather-icons');
 
